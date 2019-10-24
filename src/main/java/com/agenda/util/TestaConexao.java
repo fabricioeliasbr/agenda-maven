@@ -10,7 +10,7 @@ public class TestaConexao {
 		try {
 			Connection connection = new ConnectionFactory().getConnection();
 			connection.close();
-			System.out.println("Conex√£o aberta!");
+			System.out.println("Conex„o aberta!");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

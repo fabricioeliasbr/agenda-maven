@@ -41,15 +41,16 @@
 					<tr>
 						<th>Nome</th>
 						<th>Data de Nascimento</th>
-						<th></th>
+						<th>E-mail</th>
 					</tr>
 					
 					<c:forEach var="pessoa" items="${contatos}">
 						<tr>
 							<td>${pessoa.nome}</td>
 							<td><fmt:formatDate value="${pessoa.dataNascimento.time}" pattern="dd-MM-yyyy"/></td>
+							<td>${pessoa.contato.email}</td>
 							<td>
-								<a href="#" onclick="saveContactId(${pessoa.id})" data-toggle="modal" data-target="#modalExemplo">Remover</a>
+							<a href="#" onclick="saveContactId(${pessoa.id})" data-toggle="modal" data-target="#modalExemplo">Remover</a>
 								<span> | </span>
 								<a href="adiciona-contato.jsp?id=${pessoa.id}&nome=${pessoa.nome}&id_contato=${pessoa.contato.id}&email=${pessoa.contato.email}&telefone=${pessoa.contato.telefone}&id_endereco=${pessoa.endereco.id}&cep=${pessoa.endereco.cep}&logradouro=${pessoa.endereco.logradouro}&dataNascimento=<fmt:formatDate value="${pessoa.dataNascimento.time}" pattern="yyy-MM-dd"/>">Editar</a>
 							</td>
@@ -70,7 +71,7 @@
 					</button>
 				</div>
 				<div class="modal-body">
-					<span>Você realmente deseja remover esse contato?</span>
+					<span>Você realmente deseja remover este contato?</span>
 				</div>
 				<div class="modal-footer">
 					 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>

@@ -28,7 +28,7 @@ public class ListaUsuariosServlet extends HttpServlet {
 			request.setAttribute("contatos", contatos);
 			request.getRequestDispatcher("lista-contatos.jsp").forward(request, response);
 		} catch (Exception e) {
-			throw new ServletException("A lÃ³gica de negÃ³cios causou uma exceÃ§Ã£o", e);
+			throw new ServletException("A lógica de negócios causou uma exceção", e);
 		}
 	}
 

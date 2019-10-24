@@ -29,7 +29,7 @@ public class RemoveUsuarioServlet extends HttpServlet {
         	this.service.remover(pessoa);
 			response.sendRedirect("busca-contatos");
 		} catch (Exception e) {
-			throw new ServletException("A lÃ³gica de negÃ³cios causou uma exceÃ§Ã£o", e);
+			throw new ServletException("A lógica de negócios causou uma exceção", e);
 		}
 	}
 	
